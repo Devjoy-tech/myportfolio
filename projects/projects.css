@@ -54,6 +54,7 @@ h1{
     position: absolute;
     color: #000;
     background-color: rgba(204, 219, 232, 1);
+    object-fit: contain;
 }
 .ima_ges:hover{
     animation-name: pulse;
