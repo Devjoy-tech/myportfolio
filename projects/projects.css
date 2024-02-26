@@ -49,14 +49,12 @@ a{
     width: 400px;
     object-fit: contain;
 }
-
 h1{
     width: 400px;
     position: absolute;
     color: #000;
     background-color: rgba(204, 219, 232, 1);
 }
-
 .ima_ges:hover{
     animation-name: pulse;
     animation-duration: 3s;
@@ -93,9 +91,9 @@ h1{
         padding: 10px;
     }
     .grid-item{
-        padding: 10px;
+       padding: 10px;
     }
-    
+
     .grid-item:hover{
         animation-name: pulse;
         animation-duration: 3s;
