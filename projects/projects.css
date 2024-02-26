@@ -93,7 +93,14 @@ h1{
     .grid-item{
        padding: 10px;
     }
-
+    
+    h1{
+    width: 400px;
+    position: absolute;
+    color: #000;
+    background-color: rgba(204, 219, 232, 1);
+    }
+    
     .grid-item:hover{
         animation-name: pulse;
         animation-duration: 3s;
