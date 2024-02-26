@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background-color: #000;
+}
+button {
+    font-weight: bold;
+    font-size: 20px;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+    background-color: #000;
+    border: 2px solid #fff;
+}
+button:hover{
+    animation-name: rubberBand;
+    animation-duration: 3s;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 1)
+}
+.a{
+    color: #fff;  
+}
+a{
+    color: #fff;
+}
+.container{
+    width: 40%;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+}
+.container:hover{
+    animation-name: pulse;    ;
+    animation-duration: 5s;
+    
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    padding: 2em;
+}
+img{
+    filter: invert(100%);
+}
+.contact{
+    padding: 1%;
+    text-align: center;
+}
+
+.contact:hover{
+    animation-name: bounce;
+    animation-duration: 2s;
+
+}
+@media (max-width: 768px){
+    body{
+        background-color: #000;
+    }
+
+    .container{
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+    }
+
+    .container:hover{
+        animation-name: pulse;    ;
+        animation-duration: 5s;
+        
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+    <link rel="stylesheet" href="ecommerce.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <section class="container">
+        <div class="con">
+            <div class="nav-bar">
+                <ul>
+                    <img src="images/logo.svg" class="logo">
+                    <li class="flex-start">Collections</li>
+                    <li class="flex-start">Men</li>
+                    <li class="flex-start">Women</li>
+                    <li class="flex-start">About</li>
+                    <li class="flex-start">Contact</li>
+                    <img src="images/icon-cart.svg" class="images">
+                    <img src="images/image-avatar.png" class="img">
+                </ul>
+                <hr>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/image-product-1.jpg" class="imgs">
+                    <div class="flex-item">
+                        <img src="images/image-product-1-thumbnail.jpg" class="flex-imgs">
+                        <img src="images/image-product-2-thumbnail.jpg" class="flex-imgs">
+                        <img src="images/image-product-3-thumbnail.jpg" class="flex-imgs">
+                        <img src="images/image-product-4-thumbnail.jpg" class="flex-imgs">
+                    </div>
+
+                </div>
+                <div class="grid-item">
+                    <h4><span style="color: hsl(26, 100%, 55%)">SNEAKER COMPANY</span></h4>
+                    <h1>Fall Limited Edited Sneakers</h1>
+                    <p class="text">These low-profiled sneakers are your perfect casual wear companion. 
+                        Featuring a durable outer sole, they'll withstand everything the weather can offer.
+                    </p>
+                    <div class="flex-content">
+                        <h3>125.00$</h3>
+                        <button><span style="color:hsl(26, 100%, 55%) ">50%</span></button>
+                    </div>
+                    <p class="hr">$250.00</p>
+                    <div class="wrapper">
+                        <span class="minus" class="wrap_per">-</span>
+                        <span class="num" class="wrap_per">01</span>
+                        <span class="plus" class="wrap_per">+</span>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+    </section>
+    <script>
+        const plus = document.querySelector('.plus');
+        const minus = document.querySelector('.minus');
+        const num = document.querySelector('.num');
+        let a = 1;
+        plus.addEventListener('click', ()=>{
+            a++;
+            a = (a < 10) ? '0' + a : a;
+            num.innerText = a;
+        });
+        minus.addEventListener('click', ()=>{
+            if(a > 1){
+                a--;
+                a = (a < 10) ? '0' + a : a;
+                num.innerText = a;
+            }
+        }); 
+        
+    </script>
+</body>
+</html>
