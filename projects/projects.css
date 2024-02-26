@@ -103,6 +103,7 @@ h1{
     .ima_ges{
         width: 100%;
         object-fit: contain;
+        padding: 5px;
     }
     
 
