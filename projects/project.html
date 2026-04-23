@@ -3,22 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Projects | Joy Ironali Orie</title>
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&family=Kumbh+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <button><a href="https://devjoy-tech.github.io/myportfolio/">Home</a></button>
-    <div class="container">
-        <div class="grid-container">
-            <div class="grid-item"><a href="https://devjoy-tech.github.io/news-website/"><h1>News Project</h1><img src="images/screencapture-devjoy-tech-github-io-news-website-2024-02-26-14_22_06.png" class="ima_ges"></a></div>
-            <div class="grid-item"><a href="https://devjoy-tech.github.io/university-project/"><h1>University Clone</h1><img src="images/screencapture-devjoy-tech-github-io-news-website-2024-02-26-14_22_06.png" class="ima_ges"></a></div>
-            <div class="grid-item"><a href="https://devjoy-tech.github.io/e-commerce-website"><h1>E-Commerce Project</h1><img src="images/screencapture-devjoy-tech-github-io-e-commerce-website-2024-02-26-14_19_14.png" class="ima_ges"></a></div>
-            <div class="grid-item"><a href="https://devjoy-tech.github.io/grid-project/"><h1>Grid Project</h1><img src="images/screencapture-devjoy-tech-github-io-grid-project-2024-02-26-14_17_29.png" class="ima_ges"></a></div>
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">JOY<span class="accent">.</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <li><a href="../contactme.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
+    </nav>
+
+    <section class="projects-page">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Projects</h2>
+                <span class="line"></span>
+                <p class="section-subtitle">A collection of my work showcasing different web development skills and creative solutions.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/screencapture-devjoy-tech-github-io-news-website-2024-02-26-14_22_06.png" alt="News Website">
+                        <div class="project-overlay">
+                            <a href="https://devjoy-tech.github.io/news-website/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Devjoy-tech/news-website" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>News Website</h3>
+                        <p>Modern news platform with clean typography and responsive layout</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/screencapture-devjoy-tech-github-io-e-commerce-website-2024-02-26-14_19_14.png" alt="E-Commerce Website">
+                        <div class="project-overlay">
+                            <a href="https://devjoy-tech.github.io/e-commerce-website" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Devjoy-tech/e-commerce-website" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Store</h3>
+                        <p>Full-featured shopping experience with cart functionality</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/screencapture-devjoy-tech-github-io-university-project-2024-02-26-14_21_13.png" alt="University Project">
+                        <div class="project-overlay">
+                            <a href="https://devjoy-tech.github.io/university-project/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Devjoy-tech/university-project" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>University Website</h3>
+                        <p>Elegant academic institution website with modern design</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/screencapture-devjoy-tech-github-io-grid-project-2024-02-26-14_17_29.png" alt="Grid Project">
+                        <div class="project-overlay">
+                            <a href="https://devjoy-tech.github.io/grid-project/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Devjoy-tech/grid-project" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Testimonial Grid</h3>
+                        <p>CSS Grid showcase with beautiful card layouts</p>
+                        <div class="project-tags">
+                            <span>CSS Grid</span>
+                            <span>Flexbox</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Screenshot (5).png" alt="Ecommerce Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Product Landing Page</h3>
+                        <p>Clean product showcase with hover effects and animations</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Screenshot (7).png" alt="Grid Layout">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Responsive Dashboard</h3>
+                        <p>Admin dashboard with modern card-based design</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Flexbox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../index.html" class="logo">JOY<span class="accent">.</span></a>
+                    <p>Creating digital experiences that inspire.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="../contactme.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/Devjoy-tech" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Joy Ironali Orie. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/main.js"></script>
 </body>
 </html>
