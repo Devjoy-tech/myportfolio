@@ -292,30 +292,26 @@
                         </div>
                     </div>
                 </div>
-                <iframe name="hiddenFrame" id="hiddenFrame" style="display:none;"></iframe>
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdayyrqg" method="POST" target="hiddenFrame">
-                    <div id="formMessage" class="form-message"></div>
+                <form class="contact-form" id="contactForm" data-fs-form>
+                    <div id="formMessage" class="form-message" data-fs-success></div>
                     <div class="form-group">
-                        <input type="text" name="name" id="name" required minlength="2">
+                        <input type="text" name="name" id="name" required data-fs-field>
                         <label>Your Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" required data-fs-field>
                         <label>Your Email</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" id="subject" required minlength="3">
+                        <input type="text" name="subject" id="subject" required data-fs-field>
                         <label>Subject</label>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" rows="5" required minlength="10"></textarea>
+                        <textarea name="message" id="message" rows="5" required data-fs-field></textarea>
                         <label>Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <button type="submit" class="btn btn-primary" id="submitBtn" data-fs-submit-btn>
                         <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -362,14 +358,10 @@
 
     <script src="JS/main.js"></script>
     <script>
-        document.getElementById('hiddenFrame').addEventListener('load', function() {
-            const formMessage = document.getElementById('formMessage');
-            formMessage.className = 'form-message success';
-            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I will get back to you soon.';
-            formMessage.style.display = 'block';
-            document.getElementById('contactForm').reset();
-        });
+        window.formspree = window.formspree || function() { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contactForm', formId: 'xdayyrqg' });
     </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 
 </html>

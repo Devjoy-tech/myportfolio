@@ -305,28 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNavOnScroll);
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.innerHTML;
-        
-        btn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-        btn.disabled = true;
-        
-        setTimeout(() => {
-            btn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
-            btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-            
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                btn.disabled = false;
-                contactForm.reset();
-            }, 2000);
-        }, 1500);
-    });
-
     const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
     
     formInputs.forEach(input => {
