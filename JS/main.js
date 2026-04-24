@@ -366,6 +366,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            const link = card.querySelector('.project-link');
+            if (link && !e.target.closest('.project-link')) {
+                link.click();
+            }
+        });
+        card.addEventListener('touchstart', () => {
+            card.classList.add('active');
+        });
+        card.addEventListener('touchend', () => {
+            setTimeout(() => {
+                card.classList.remove('active');
+            }, 150);
+        });
+    });
+
     let scrollPosition = 0;
     
     window.addEventListener('scroll', () => {

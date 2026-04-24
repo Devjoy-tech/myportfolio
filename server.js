@@ -82,9 +82,15 @@ app.post('/api/contact', async (req, res) => {
 
     } catch (error) {
         console.error('Email error:', error);
+        
+        let errorMessage = 'Failed to send message. Please try again later.';
+        if (error.code === 'EAUTH' || error.message.includes('Invalid credentials')) {
+            errorMessage = 'Email service not configured. Please contact the administrator.';
+        }
+        
         res.status(500).json({
             success: false,
-            errors: ['Failed to send message. Please try again later.']
+            errors: [errorMessage]
         });
     }
 });

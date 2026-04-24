@@ -615,7 +615,8 @@ ul {
     transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover .project-overlay,
+.project-card.active .project-overlay {
     opacity: 1;
 }
 
@@ -633,8 +634,13 @@ ul {
     transition: transform 0.3s ease;
 }
 
-.project-card:hover .project-link {
+.project-card:hover .project-link,
+.project-card.active .project-link {
     transform: scale(1);
+}
+
+.project-card {
+    cursor: pointer;
 }
 
 .project-info {
@@ -837,6 +843,29 @@ ul {
     margin-bottom: 20px;
     display: none;
     animation: fadeIn 0.3s ease;
+}
+
+[data-fs-success],
+[data-fs-error] {
+    display: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+[data-fs-success]:not(:empty) {
+    display: block;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #10b981;
+}
+
+[data-fs-error]:not(:empty) {
+    display: block;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: #ef4444;
 }
 
 .form-message.success {
