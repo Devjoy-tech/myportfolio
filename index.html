@@ -292,31 +292,30 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm" data-fs-form>
-                    <div id="formMessage" class="form-message" data-fs-success></div>
-                    <div id="formGlobalError" class="form-message error" data-fs-error></div>
+                <iframe name="hiddenFrame" id="hiddenFrame" style="display:none;"></iframe>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdayyrqg" method="POST" target="hiddenFrame">
+                    <div id="formMessage" class="form-message"></div>
                     <div class="form-group">
-                        <input type="text" name="name" id="name" required minlength="2" data-fs-field>
+                        <input type="text" name="name" id="name" required minlength="2">
                         <label>Your Name</label>
-                        <span class="error-text" id="nameError" data-fs-error="name"></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" required data-fs-field>
+                        <input type="email" name="email" id="email" required>
                         <label>Your Email</label>
-                        <span class="error-text" id="emailError" data-fs-error="email"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" id="subject" required minlength="3" data-fs-field>
+                        <input type="text" name="subject" id="subject" required minlength="3">
                         <label>Subject</label>
-                        <span class="error-text" id="subjectError" data-fs-error="subject"></span>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" id="message" rows="5" required minlength="10" data-fs-field></textarea>
+                        <textarea name="message" id="message" rows="5" required minlength="10"></textarea>
                         <label>Your Message</label>
-                        <span class="error-text" id="messageError" data-fs-error="message"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn" data-fs-submit-btn>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
                         <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -363,25 +362,11 @@
 
     <script src="JS/main.js"></script>
     <script>
-        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-        formspree('initForm', { formElement: '#contactForm', formId: 'xdayyrqg' });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-    <script>
-        const formMessage = document.getElementById('formMessage');
-        const submitBtn = document.getElementById('submitBtn');
-
-        function showMessage(type, text) {
-            formMessage.className = 'form-message ' + type;
-            formMessage.innerHTML = text;
+        document.getElementById('hiddenFrame').addEventListener('load', function() {
+            const formMessage = document.getElementById('formMessage');
+            formMessage.className = 'form-message success';
+            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I will get back to you soon.';
             formMessage.style.display = 'block';
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        }
-
-        document.getElementById('contactForm').addEventListener('formspree.success', function(e) {
-            showMessage('success', '<i class="fas fa-check-circle"></i> Message sent successfully! I will get back to you soon.');
             document.getElementById('contactForm').reset();
         });
     </script>
